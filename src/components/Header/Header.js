@@ -1,5 +1,6 @@
 import React from 'react';
 import formatNumber from '../../Helpers/formatHelpers';
+import css from './header.module.css';
 
 export default function Header({
   filter,
@@ -13,16 +14,27 @@ export default function Header({
   };
 
   return (
-    <div>
-      <input type="text" value={filter} onChange={handleInputChange} />
-      <span>
+    <div className={css.flexRow}>
+      <input
+        placeholder="Insert a Country..."
+        type="text"
+        value={filter}
+        onChange={handleInputChange}
+      />
+      <span className={css.countries}>
         | Países:
-        {countryCount}
+        <strong>
+          &nbsp;
+          {countryCount}
+        </strong>
         &nbsp;
       </span>
-      <span>
+      <span className={css.population}>
         | População:
-        {formatNumber(totalPopulation)}
+        <strong>
+          &nbsp;
+          {formatNumber(totalPopulation)}
+        </strong>
       </span>
     </div>
   );

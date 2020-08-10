@@ -73,7 +73,7 @@ export default class App extends Component {
     return (
       <>
         <div className="container">
-          <h1>React Countries</h1>
+          <h1 style={styles.centeredTitle}>React Countries</h1>
           <Header
             filter={filter}
             countryCount={filteredCountries.length}
@@ -86,3 +86,9 @@ export default class App extends Component {
     );
   }
 }
+
+const styles = {
+  centeredTitle: {
+    textAlign: 'center',
+  }
+};
