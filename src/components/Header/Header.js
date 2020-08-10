@@ -1,6 +1,11 @@
 import React from 'react';
 
-export default function Header({ filter, onChangeFilter }) {
+export default function Header({
+  filter,
+  totalPopulation,
+  countryCount,
+  onChangeFilter,
+}) {
   const handleInputChange = (event) => {
     const newText = event.target.value;
     onChangeFilter(newText);
@@ -9,8 +14,15 @@ export default function Header({ filter, onChangeFilter }) {
   return (
     <div>
       <input type="text" value={filter} onChange={handleInputChange} />
-      <span>| Países: </span>
-      <span>| População: </span>
+      <span>
+        | Países:
+        {countryCount}
+        &nbsp;
+      </span>
+      <span>
+        | População:
+        {totalPopulation}
+      </span>
     </div>
   );
 }
