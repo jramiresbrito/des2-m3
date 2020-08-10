@@ -14,7 +14,9 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['error', { singleQuote: true }],
+    'prettier/prettier': ['error', { trailingComma: 'es5' }],
     'no-console': 'off',
     'react/jsx-filename-extension': 'off',
+    'react/prop-types': 'off'
   },
 };
