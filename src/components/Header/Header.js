@@ -1,4 +1,5 @@
 import React from 'react';
+import formatNumber from '../../Helpers/formatHelpers';
 
 export default function Header({
   filter,
@@ -21,7 +22,7 @@ export default function Header({
       </span>
       <span>
         | População:
-        {totalPopulation}
+        {formatNumber(totalPopulation)}
       </span>
     </div>
   );
